@@ -8,5 +8,6 @@ cd $TARGET
 pdflatex ../src/$TEX
 pdflatex ../src/$TEX
 
-open paper.pdf
+mv paper.pdf ..
 cd ..
+open paper.pdf
