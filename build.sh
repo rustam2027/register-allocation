@@ -1,12 +1,17 @@
 TARGET=target
-TEX=paper.tex
+TEXFILE=paper
+BIB=my.bib
 
 rm -r $TARGET
 mkdir $TARGET
 cd $TARGET
 
-pdflatex ../src/$TEX
-pdflatex ../src/$TEX
+cp ../src/* .
+
+pdflatex $TEXFILE.tex
+bibtex $TEXFILE
+pdflatex $TEXFILE.tex
+pdflatex $TEXFILE.tex
 
 mv paper.pdf ..
 cd ..

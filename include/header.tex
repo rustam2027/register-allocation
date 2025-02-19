@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage[a4paper]{geometry}
+
+% Для графов
+\usepackage{tikz}
+\usetikzlibrary{graphs}
+
+\usepackage{transparent}
+
+% Поддержка русского языка
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{amsfonts, amssymb}  
+\usepackage{mathtools}
+\usepackage{listings} % Для кода
+\usepackage{float}    % Для точного позиционирования
+\usepackage{hyperref}
+
+\usepackage{titlesec}
+
+\usepackage{cite} % Bibtex
+
+\titlelabel{\thetitle. \quad} % Добавление точек после номеров секций
+
+% Настройки страницы
+\oddsidemargin=-0.5cm
+\setlength{\textwidth}{6.5in}
+\addtolength{\voffset}{-20pt}
+\addtolength{\headsep}{25pt}
+
+\newcounter{definition}
+\newcounter{example}
+
+\newenvironment{definition}[1][]{\refstepcounter{definition}\par\medskip\noindent\begin{quote}
+\textbf{Определение~\thedefinition. #1}\rmfamily}{\end{quote}\medskip}
+
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip\noindent\begin{quote}
+\textbf{Пример~\theexample. #1}\rmfamily}{\end{quote}\medskip}
