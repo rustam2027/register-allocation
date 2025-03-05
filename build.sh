@@ -6,7 +6,7 @@ rm -r $TARGET
 mkdir $TARGET
 cd $TARGET
 
-cp ../src/* .
+cp -r ../src/* .
 
 pdflatex $TEXFILE.tex
 bibtex $TEXFILE
