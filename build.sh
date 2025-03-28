@@ -15,4 +15,3 @@ pdflatex $TEXFILE.tex
 
 mv paper.pdf ..
 cd ..
-open paper.pdf
